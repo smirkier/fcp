@@ -36,6 +36,7 @@ CREATE TABLE fcp_warning (
 	cabinet_id VARCHAR(64) NOT NULL comment '机架号',
 	case_id VARCHAR(64) NOT NULL comment '机箱号',
 	card_id VARCHAR(64) NOT NULL comment '板卡出厂号',
+	card_slot VARCHAR(64) NOT NULL comment '板卡插槽号',
         card_type VARCHAR(64) NOT NULL comment '板卡类型',
 	warning_content VARCHAR(1024) NOT NULL comment '报警内容',
 	warning_time datetime NOT NULL comment '报警时间',
@@ -47,6 +48,7 @@ CREATE TABLE fcp_warning_history (
 	cabinet_id VARCHAR(64) NOT NULL comment '机架号',
 	case_id VARCHAR(64) NOT NULL comment '机箱号',
 	card_id VARCHAR(64) NOT NULL comment '板卡出厂号',
+        card_slot VARCHAR(64) NOT NULL comment '板卡插槽号',
 	card_type VARCHAR(64) NOT NULL comment '板卡类型',
 	warning_content VARCHAR(1024) NOT NULL comment '报警内容',
 	warning_time datetime NOT NULL comment '报警时间'
@@ -101,8 +103,8 @@ CREATE TABLE fcp_hardware_warning (
 	cabinet_id VARCHAR(64) NOT NULL comment '机架号',
 	case_id VARCHAR(64) NOT NULL comment '机箱号',
 	card_id VARCHAR(64) NOT NULL comment '板卡出厂号',
+	card_slot VARCHAR(64) NOT NULL comment '板卡插槽号',
         card_type VARCHAR(64) NOT NULL comment '板卡类型',
-	warning_class VARCHAR(64) NOT NULL comment '报警级别',
 	warning_content VARCHAR(1024) NOT NULL comment '报警内容',
 	warning_time datetime NOT NULL comment '报警时间',
 	primary key (card_type,card_id)
@@ -113,8 +115,8 @@ CREATE TABLE fcp_hardware_warning_history (
 	cabinet_id VARCHAR(64) NOT NULL comment '机架号',
 	case_id VARCHAR(64) NOT NULL comment '机箱号',
 	card_id VARCHAR(64) NOT NULL comment '板卡出厂号',
+	card_slot VARCHAR(64) NOT NULL comment '板卡插槽号',
 	card_type VARCHAR(64) NOT NULL comment '板卡类型',
-	warning_class VARCHAR(64) NOT NULL comment '报警级别',
 	warning_content VARCHAR(1024) NOT NULL comment '报警内容',
 	warning_time datetime NOT NULL comment '报警时间'
 )  ENGINE=INNODB DEFAULT CHARSET=utf8 comment='报警日志表';
