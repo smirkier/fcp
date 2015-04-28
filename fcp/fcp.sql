@@ -101,7 +101,9 @@ CREATE TABLE fcp_log_history (
 DROP TABLE IF EXISTS fcp_hardware_warning;
 CREATE TABLE fcp_hardware_warning (
 	cabinet_id VARCHAR(64) NOT NULL comment '机架号',
+	cabinet_location VARCHAR(64) NOT NULL comment '机架位置',
 	case_id VARCHAR(64) NOT NULL comment '机箱号',
+	case_position VARCHAR(64) NOT NULL comment '机箱机位',
 	card_id VARCHAR(64) NOT NULL comment '板卡出厂号',
 	card_slot VARCHAR(64) NOT NULL comment '板卡插槽号',
         card_type VARCHAR(64) NOT NULL comment '板卡类型',
@@ -113,7 +115,9 @@ CREATE TABLE fcp_hardware_warning (
 DROP TABLE IF EXISTS fcp_hardware_warning_history;
 CREATE TABLE fcp_hardware_warning_history (
 	cabinet_id VARCHAR(64) NOT NULL comment '机架号',
+	cabinet_location VARCHAR(64) NOT NULL comment '机架位置',
 	case_id VARCHAR(64) NOT NULL comment '机箱号',
+	case_position VARCHAR(64) NOT NULL comment '机箱机位',
 	card_id VARCHAR(64) NOT NULL comment '板卡出厂号',
 	card_slot VARCHAR(64) NOT NULL comment '板卡插槽号',
 	card_type VARCHAR(64) NOT NULL comment '板卡类型',
